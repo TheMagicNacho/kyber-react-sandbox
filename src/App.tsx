@@ -2,7 +2,18 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+// import * as wasm from './kyber/pqc_kyber_bg.wasm';
+// import * as kyber from './kyber/pqc_kyber_bg.js';
+
+import * as kyber from 'pqc_kyber';
+
+
+
 function App() {
+  // kyber.__wbg_set_wasm(wasm);
+  let keys = kyber.keypair();
+  console.log(keys);
+
   return (
     <div className="App">
       <header className="App-header">
